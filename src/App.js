@@ -106,16 +106,16 @@ class App extends Component {
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
         <h2>Favorite Movies</h2>
+	  {/* Loop through the profiles array and get each username and their faviourite movies by using the profile data*/}
           {profiles.map( profile => {
               const user = users[profile.userID].name;
               const movie = movies[profile.favoriteMovieID].name;
-
-			return (
-            	<li key={profile.id}>
-              		<p>{`${user}'s faviourite movie is "${movie}" `}</p>
-              </li>
-            )
-		})};
+		return (
+			<li key={profile.id}>
+				<p>{`${user}'s faviourite movie is "${movie}" `}</p>
+		      </li>
+            	)
+	})};
       </div>
     );
   }
